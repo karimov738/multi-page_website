@@ -1,7 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 @import 'media';
 @import 'utilities';
+@import 'variables';
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'raleway';
+}
 
-h1{
-    color: $Primary-color;
+.container {
+    max-width: 1232px;
+    margin-inline: auto;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.purple-bg {
+    background-color: $Primary-color;
+}
+
+.main-p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+}
+
+// ============= NAVBAR SECTION ================
+.navbar {
+    @include flexCenter;
+    justify-content: space-between;
+    padding: 21px 0;
+
+    .nav-logo {
+        @include flexCenter;
+
+        span {
+            font-size: 34px;
+            font-weight: 800;
+            padding-left: 15px;
+        }
+    }
+
+    .nav-right {
+        .nav-links {
+            ul {
+                @include flexCenter;
+                justify-content: space-between;
+
+                li {
+                    padding: 0 22px;
+
+                    a {
+                        color: $dark-grey;
+                    }
+                }
+
+                li:first-child {
+                    a {
+                        color: $Primary-color;
+                    }
+                }
+
+                .btn-purple {
+                    @include main-btn;
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+}
+
+// ============= AI SECTION ================
+
+.ai {
+    @include flexCenter;
+    justify-content: space-between;
+    padding: 122px 0 98px;
+    color: #fff;
+
+    .left-side {
+        max-width: 40%;
+
+        .featured-post {
+            font-weight: 700;
+        }
+
+        .ai-header {
+            font-weight: 700;
+            font-size: 64px;
+            width: 100%;
+        }
+
+        .ai-text {
+            padding: 28px 0 64px;
+        }
+
+        .ai-button {
+            .btn-main {
+                @include main-btn;
+                color: #373737;
+                background-color: #fff;
+                padding: 16px 48px;
+            }
+        }
+    }
+
+    .ai-img {
+        background-image: url(/images/ai-img.jpg);
+        background-position: center;
+        background-size: cover;
+        max-width: 43%;
+        min-width: 608px;
+        min-height: 576px;
+        border-radius: 16px;
+    }
 }

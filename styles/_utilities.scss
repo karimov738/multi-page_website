@@ -1,0 +1,18 @@
+// das ist mein tools
+
+@mixin flexCenter() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin main-btn() {
+    padding: 14px 32px;
+    background-color: $Primary-color;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}

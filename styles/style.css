@@ -1,3 +1,120 @@
-h1 {
-  color: red;
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "raleway";
+}
+
+.container {
+  max-width: 1232px;
+  margin-inline: auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.purple-bg {
+  background-color: #7C4EE4;
+}
+
+.main-p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 21px 0;
+}
+.navbar .nav-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar .nav-logo span {
+  font-size: 34px;
+  font-weight: 800;
+  padding-left: 15px;
+}
+.navbar .nav-right .nav-links ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .nav-right .nav-links ul li {
+  padding: 0 22px;
+}
+.navbar .nav-right .nav-links ul li a {
+  color: #333333;
+}
+.navbar .nav-right .nav-links ul li:first-child a {
+  color: #7C4EE4;
+}
+.navbar .nav-right .nav-links ul .btn-purple {
+  padding: 14px 32px;
+  background-color: #7C4EE4;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.ai {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 122px 0 98px;
+  color: #fff;
+}
+.ai .left-side {
+  max-width: 40%;
+}
+.ai .left-side .featured-post {
+  font-weight: 700;
+}
+.ai .left-side .ai-header {
+  font-weight: 700;
+  font-size: 64px;
+  width: 100%;
+}
+.ai .left-side .ai-text {
+  padding: 28px 0 64px;
+}
+.ai .left-side .ai-button .btn-main {
+  padding: 14px 32px;
+  background-color: #7C4EE4;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #373737;
+  background-color: #fff;
+  padding: 16px 48px;
+}
+.ai .ai-img {
+  background-image: url(/images/ai-img.jpg);
+  background-position: center;
+  background-size: cover;
+  max-width: 43%;
+  min-width: 608px;
+  min-height: 576px;
+  border-radius: 16px;
 }/*# sourceMappingURL=style.css.map */
