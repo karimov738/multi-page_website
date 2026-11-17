@@ -1,12 +1,15 @@
 // das ist mein tools
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 @mixin flexCenter() {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-@mixin main-btn() {
+@mixin btn-main() {
     padding: 14px 32px;
     background-color: $Primary-color;
     color: #fff;
@@ -15,4 +18,71 @@
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
+}
+
+@mixin p1648 {
+    padding: 16px 48px;
+}
+
+@mixin classDevelopment() {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 150%;
+    font-family: roboto !important;
+    color: $dark-grey;
+}
+
+@mixin date() {
+    font-weight: 500;
+    font-size: 12px;
+    font-family: 'roboto' !important;
+    line-height: 150%;
+    color: $light-grey;
+}
+
+@mixin roboto() {
+    font-family: 'roboto' !important;
+}
+
+@mixin topHeader() {
+    font-weight: 700;
+    font-size: 48px;
+}
+
+@mixin innerHeader() {
+    font-weight: 700;
+    font-size: 32px;
+}
+
+@mixin cardHeader() {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+
+// ====================== CARDS ==========================
+
+@mixin mainCard() {
+    .card {
+        height: 360px;
+        display: grid;
+        gap: 20px;
+        min-height: 640px;
+
+        img {
+            width: 400px;
+            height: 360px;
+            object-fit: cover;
+            border-radius: 16px;
+        }
+
+        .card-header {
+            @include cardHeader;
+            color: $dark-grey;
+        }
+
+        .card-text {
+            padding-right: 10px;
+        }
+    }
 }

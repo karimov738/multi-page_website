@@ -5,6 +5,8 @@
 @import 'utilities';
 @import 'variables';
 
+// ============== GLOBAL STYLES ===============
+
 * {
     margin: 0;
     padding: 0;
@@ -33,6 +35,33 @@ a {
     font-weight: 400;
     font-size: 18px;
     line-height: 150%;
+    color: $grey;
+}
+
+.dev-and-date {
+    @include flexCenter;
+    @include roboto;
+    justify-content: start;
+    gap: 8px;
+
+    .development {
+        @include classDevelopment;
+    }
+
+    .date {
+        @include date;
+    }
+}
+
+.read-more {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+
+    a {
+        color: $Primary-color;
+        text-decoration: underline;
+    }
 }
 
 // ============= NAVBAR SECTION ================
@@ -72,7 +101,8 @@ a {
                 }
 
                 .btn-purple {
-                    @include main-btn;
+                    @include btn-main;
+                    @include p1648;
                     margin-left: 20px;
                 }
             }
@@ -85,11 +115,13 @@ a {
 .ai {
     @include flexCenter;
     justify-content: space-between;
+    align-items: unset;
     padding: 122px 0 98px;
     color: #fff;
 
     .left-side {
         max-width: 40%;
+        padding-top: 14px;
 
         .featured-post {
             font-weight: 700;
@@ -103,11 +135,12 @@ a {
 
         .ai-text {
             padding: 28px 0 64px;
+            color: #fff;
         }
 
         .ai-button {
             .btn-main {
-                @include main-btn;
+                @include btn-main;
                 color: #373737;
                 background-color: #fff;
                 padding: 16px 48px;
@@ -123,5 +156,222 @@ a {
         min-width: 608px;
         min-height: 576px;
         border-radius: 16px;
+    }
+}
+
+// ============= VR SECTION ================
+
+.vr {
+    padding: 130px 0 80px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+
+    .vr-bg {
+        background-image: url("../images/guy_with_vr.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 576px;
+        max-height: 576px;
+        position: relative;
+        border-radius: 16px;
+    }
+
+    .vr-card {
+        display: grid;
+        gap: 20px;
+        position: relative;
+        right: 0;
+        bottom: 0;
+        min-height: 360px;
+        max-width: 75%;
+        background-color: #fff;
+        margin-top: -240px;
+        padding: 32px 0 42px 32px;
+        border-radius: 16px;
+        box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.1);
+
+        // .dev-and-date {
+        //     @include flexCenter;
+        //     justify-content: start;
+        //     gap: 8px;
+
+        //     .development {
+        //         @include classDevelopment;
+        //     }
+
+        //     .date {
+        //         @include date;
+        //     }
+        // }
+
+        .vr-header {
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 45px;
+            max-width: 90%;
+        }
+
+        .vr-text {
+            color: $grey;
+            max-width: 90%;
+        }
+
+        .vr-btn {
+            .btn-main {
+                @include btn-main;
+                border: 2px solid $Primary-color;
+                background-color: #fff;
+                color: $Primary-color;
+            }
+        }
+    }
+}
+
+// ============= RECENT SECTION ================
+
+.recent {
+    .recent-top {
+        @include flexCenter;
+        justify-content: space-between;
+
+        h1 {
+            @include topHeader;
+        }
+
+        .btn-main {
+            @include btn-main;
+            @include roboto;
+            @include p1648;
+        }
+    }
+
+    .recent-low {
+        @include flexCenter;
+        justify-content: space-between;
+        align-items: unset;
+        padding: 80px 0 60px;
+
+        .recent-img {
+            background-image: url(/images/guy_with_vr.jpg);
+            background-position: center;
+            background-size: cover;
+            max-width: 58%;
+            min-width: 712px;
+            min-height: 456px;
+            border-radius: 16px;
+
+        }
+
+        .recent-right {
+            display: flex;
+            flex-direction: column;
+            max-width: 38%;
+            padding: 16px 0 33px;
+            gap: 30px;
+
+            .recent-header {
+                @include innerHeader;
+            }
+
+            // .recent-text {
+            //     font-family: roboto !important;
+            // }
+
+            .recent-btn {
+                .btn-main {
+                    @include btn-main;
+                    background-color: #fff;
+                    color: $Primary-color;
+                    border: 1px solid $Primary-color;
+                }
+            }
+        }
+    }
+}
+
+// ============= RECENT CARDS ================
+// ============= POPULAR CARDS ================
+// ============= POPULAR CARDS LOW ================
+
+.recent-cards,
+.popular-cards,
+.popular-cards-low {
+    @include flexCenter;
+    gap: 16px;
+    padding: 40px 0;
+
+    @include mainCard;
+}
+
+// .popular-cards-low {
+
+// }
+
+// ============= POPULAR SECTION ================
+
+.popular {
+    @include flexCenter;
+    justify-content: space-between;
+
+
+    .popular-header {
+        @include topHeader;
+    }
+
+    .btn-main {
+        @include btn-main;
+        @include p1648;
+    }
+}
+
+// ============= LANDING FORM ================
+
+.form {
+    @include flexCenter;
+    flex-direction: column;
+    background-color: $Primary-color;
+    padding: 130px 0;
+    margin-inline: auto;
+    text-align: center;
+    color: #fff;
+
+    .form-content {
+        @include flexCenter;
+        gap: 30px;
+        width: 60%;
+
+        flex-direction: column;
+
+        .form-header {
+            font-weight: 700;
+            font-size: 52px;
+        }
+
+        form {
+            display: flex;
+            width: 65%;
+            gap: 8px;
+
+            input {
+                width: 65%;
+                padding: 20px;
+                border-radius: 8px;
+                border: none;
+            }
+
+            .btn-main {
+                @include btn-main;
+                padding: 20px 34px;
+                border: 2px solid #fff;
+                
+            }
+        }
+
+        .form-text {
+            color: #bbb;
+        }
     }
 }
