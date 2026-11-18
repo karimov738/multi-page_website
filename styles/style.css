@@ -66,22 +66,23 @@ a {
   text-decoration: underline;
 }
 
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo span {
+  font-size: 34px;
+  font-weight: 800;
+  padding-left: 15px;
+}
+
 .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
   justify-content: space-between;
   padding: 21px 0;
-}
-.navbar .nav-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.navbar .nav-logo span {
-  font-size: 34px;
-  font-weight: 800;
-  padding-left: 15px;
 }
 .navbar .nav-right .nav-links ul {
   display: flex;
@@ -387,4 +388,48 @@ a {
 }
 .form .form-content .form-text {
   color: #bbb;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 0;
+  gap: 40px;
+}
+.footer .footer-top {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+  border-bottom: 1px solid #7C4EE4;
+  padding-bottom: 40px;
+}
+.footer .footer-top .f-links ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.footer .footer-top .f-links ul a {
+  color: #150E06;
+}
+.footer .footer-top .footer-circle ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.footer .footer-top .footer-circle ul li {
+  background-color: #7C4EE4;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 50%;
+}
+.footer .footer-top .footer-circle ul li a {
+  font-weight: 700;
+  color: #fff;
 }/*# sourceMappingURL=style.css.map */

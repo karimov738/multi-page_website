@@ -4,81 +4,15 @@
 @import 'media';
 @import 'utilities';
 @import 'variables';
+@import 'globalStyles';
 
-// ============== GLOBAL STYLES ===============
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'raleway';
-}
-
-.container {
-    max-width: 1232px;
-    margin-inline: auto;
-}
-
-ul {
-    list-style-type: none;
-}
-
-a {
-    text-decoration: none;
-}
-
-.purple-bg {
-    background-color: $Primary-color;
-}
-
-.main-p {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 150%;
-    color: $grey;
-}
-
-.dev-and-date {
-    @include flexCenter;
-    @include roboto;
-    justify-content: start;
-    gap: 8px;
-
-    .development {
-        @include classDevelopment;
-    }
-
-    .date {
-        @include date;
-    }
-}
-
-.read-more {
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 150%;
-
-    a {
-        color: $Primary-color;
-        text-decoration: underline;
-    }
-}
 
 // ============= NAVBAR SECTION ================
 .navbar {
     @include flexCenter;
     justify-content: space-between;
     padding: 21px 0;
-
-    .nav-logo {
-        @include flexCenter;
-
-        span {
-            font-size: 34px;
-            font-weight: 800;
-            padding-left: 15px;
-        }
-    }
 
     .nav-right {
         .nav-links {
@@ -366,7 +300,7 @@ a {
                 @include btn-main;
                 padding: 20px 34px;
                 border: 2px solid #fff;
-                
+
             }
         }
 
@@ -374,4 +308,56 @@ a {
             color: #bbb;
         }
     }
+}
+
+// =============== LANDING FORM ================
+
+.footer {
+    @include flexCenter;
+    flex-direction: column;
+    padding: 50px 0;
+    gap: 40px;
+
+    .footer-top {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        width: 100%;
+        border-bottom: 1px solid $Primary-color;
+        padding-bottom: 40px;
+
+        .f-links {
+            ul {
+                @include flexCenter;
+                gap: 50px;
+
+                a {
+                    color: #150E06;
+                }
+            }
+        }
+
+        .footer-circle {
+            ul {
+                @include flexCenter;
+                gap: 10px;
+
+                li {
+                    background-color: $Primary-color;
+                    width: 40px;
+                    height: 40px;
+                    text-align: center;
+                    padding: 10px 0;
+                    border-radius: 50%;
+
+                    a {
+                        font-weight: 700;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+
 }

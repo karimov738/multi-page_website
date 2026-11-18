@@ -1,0 +1,68 @@
+// ============== GLOBAL STYLES ===============
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'raleway';
+}
+
+.container {
+    max-width: 1232px;
+    margin-inline: auto;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.purple-bg {
+    background-color: $Primary-color;
+}
+
+.main-p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: $grey;
+}
+
+.dev-and-date {
+    @include flexCenter;
+    @include roboto;
+    justify-content: start;
+    gap: 8px;
+
+    .development {
+        @include classDevelopment;
+    }
+
+    .date {
+        @include date;
+    }
+}
+
+.read-more {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+
+    a {
+        color: $Primary-color;
+        text-decoration: underline;
+    }
+}
+
+.logo {
+    @include flexCenter;
+
+    span {
+        font-size: 34px;
+        font-weight: 800;
+        padding-left: 15px;
+    }
+}
