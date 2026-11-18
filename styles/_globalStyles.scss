@@ -1,68 +1,278 @@
 // ============== GLOBAL STYLES ===============
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'raleway';
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "raleway";
 }
 
 .container {
-    max-width: 1232px;
-    margin-inline: auto;
+  max-width: 1232px;
+  margin-inline: auto;
 }
 
+// nav {
+//   // display: none;
+// }
+
 ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .purple-bg {
-    background-color: $Primary-color;
+  background-color: $Primary-color;
 }
 
 .main-p {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 150%;
-    color: $grey;
+  line-height: 150%;
+  color: $grey;
 }
 
 .dev-and-date {
-    @include flexCenter;
-    @include roboto;
-    justify-content: start;
-    gap: 8px;
+  @include flexCenter;
+  @include roboto;
+  justify-content: start;
+  gap: 8px;
 
-    .development {
-        @include classDevelopment;
-    }
+  .development {
+    @include classDevelopment;
+  }
 
-    .date {
-        @include date;
-    }
+  .date {
+    @include date;
+  }
 }
 
 .read-more {
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 150%;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
 
-    a {
-        color: $Primary-color;
-        text-decoration: underline;
-    }
+  a {
+    color: $Primary-color;
+    text-decoration: underline;
+  }
 }
 
 .logo {
-    @include flexCenter;
+  @include flexCenter;
 
-    span {
-        font-size: 34px;
-        font-weight: 800;
-        padding-left: 15px;
+  span {
+    font-size: 34px;
+    font-weight: 800;
+    padding-left: 15px;
+  }
+}
+
+.ai-header {
+  font-weight: 700;
+  font-size: 64px;
+  width: 100%;
+  line-height: 86px;
+}
+
+// ============= NAVBAR SECTION ================
+.navbar {
+  .navbar-content {
+    @include flexCenter;
+    justify-content: space-between;
+    padding: 21px 5px 21px 0;
+
+    .hamburger-content {
+      display: none;
+      position: absolute;
+      width: 100%;
+      background-color: $Primary-color;
+      justify-content: flex-start;
+      top: 11%;
+      left: 0;
+      padding: 20px;
+
+      .active {
+        display: none;
+        ul {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+
+          li {
+            padding: 20px;
+
+            a {
+              color: #fff;
+            }
+          }
+
+          li:hover {
+            background-color: #6a43c5;
+            cursor: pointer;
+          }
+          .ham-button {
+            padding: 10px;
+          }
+        }
+      }
+
+      //   li:first-child {
+      //     a {
+      //     //   color: $Primary-color;
+      //     }
+      //   }
+
+      .btn-purple {
+        @include btn-main;
+        color: #373737;
+        background-color: #fff;
+        padding: 16px 48px;
+        // @include p1648;
+      }
+
+      .active {
+        display: none;
+        padding: 15px 10px;
+        flex-direction: column;
+      }
     }
+
+    .nav-right {
+      .nav-links {
+        ul {
+          @include flexCenter;
+          justify-content: space-between;
+
+          li {
+            padding: 0 22px;
+
+            a {
+              color: $dark-grey;
+            }
+          }
+
+          li:first-child {
+            a {
+              color: $Primary-color;
+            }
+          }
+
+          .btn-purple {
+            @include btn-main;
+            @include p1648;
+            margin-left: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .hamburger {
+    display: none;
+    height: 50px;
+    cursor: pointer;
+    padding: 5px;
+  }
+}
+
+// ============= EMAIL FORM ================
+
+.form {
+  @include flexCenter;
+  flex-direction: column;
+  padding: 130px 0;
+  margin-inline: auto;
+  text-align: center;
+  color: #fff;
+
+  .form-content {
+    @include flexCenter;
+    gap: 30px;
+    width: 60%;
+
+    flex-direction: column;
+
+    .form-header {
+      font-weight: 700;
+      font-size: 52px;
+    }
+
+    form {
+      display: flex;
+      width: 65%;
+      gap: 8px;
+
+      input {
+        width: 65%;
+        padding: 20px;
+        border-radius: 8px;
+        border: none;
+      }
+
+      .btn-main {
+        @include btn-main;
+        padding: 20px 34px;
+        border: 2px solid #fff;
+      }
+    }
+
+    .form-text {
+      color: #bbb;
+    }
+  }
+}
+
+// =============== LANDING FORM ================
+
+.footer {
+  @include flexCenter;
+  flex-direction: column;
+  padding: 50px 0;
+  gap: 40px;
+
+  .footer-top {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    border-bottom: 1px solid $Primary-color;
+    padding-bottom: 40px;
+
+    .f-links {
+      ul {
+        @include flexCenter;
+        gap: 50px;
+
+        a {
+          color: #150e06;
+        }
+      }
+    }
+
+    .footer-circle {
+      ul {
+        @include flexCenter;
+        gap: 16px;
+
+        li {
+          background-color: $Primary-color;
+          width: 40px;
+          height: 40px;
+          text-align: center;
+          padding: 10px 0;
+          border-radius: 50%;
+
+          a {
+            font-weight: 700;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
 }

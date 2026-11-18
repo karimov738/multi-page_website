@@ -41,7 +41,7 @@
 }
 
 @mixin roboto() {
-    font-family: 'roboto' !important;
+    font-family: 'roboto';
 }
 
 @mixin topHeader() {
@@ -56,7 +56,7 @@
 
 @mixin cardHeader() {
     font-weight: 700;
-    font-size: 24px;
+    font-size: 18px;
 }
 
 
@@ -70,7 +70,7 @@
         min-height: 640px;
 
         img {
-            width: 400px;
+            width: 100%;
             height: 360px;
             object-fit: cover;
             border-radius: 16px;
@@ -82,7 +82,8 @@
         }
 
         .card-text {
-            padding-right: 10px;
+            @include roboto;
         }
     }
 }
+

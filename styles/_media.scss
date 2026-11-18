@@ -1,0 +1,189 @@
+// its media godamn fuck (kebu 2026.11.18)
+
+//=================== LANDING PAGE MEDIA ===================
+
+@media (max-width: 1320px) {
+  .container {
+    max-width: 1132px;
+  }
+}
+
+@media (max-width: 1210px) {
+  .container {
+    max-width: 1022px;
+  }
+
+  .ai-header {
+    font-size: 46px;
+    line-height: 62px;
+  }
+
+  .ai {
+    .ai-img {
+      img {
+        height: 516px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1110px) {
+  .container {
+    max-width: 912px;
+  }
+
+  .ai {
+    .left-side {
+      max-width: 47%;
+    }
+  }
+
+  .recent-cards,
+  .popular-cards,
+  .popular-cards-low {
+    .card {
+      img {
+        height: 300px;
+      }
+      // .dev-and-date,
+      // .card-header,
+      // .card-text {
+      //   display: inline;
+      // }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: 882px;
+  }
+
+  .recent-cards,
+  .popular-cards,
+  .popular-cards-low {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .container {
+    max-width: 850px;
+  }
+
+  .main-p {
+    font-size: 11px;
+  }
+
+  .dev-and-date {
+    align-items: unset;
+    .development {
+      font-size: 8px;
+    }
+    .date {
+      font-size: 8px;
+    }
+  }
+}
+
+@media (max-width: 930px) {
+  .container {
+    max-width: 770px;
+  }
+
+  .ai {
+    .left-side {
+      max-width: 40%;
+    }
+
+    .ai-img {
+      max-width: 55%;
+      img {
+        height: 516px;
+      }
+    }
+  }
+
+  .recent-cards,
+  .popular-cards,
+  .popular-cards-low {
+    .card {
+      img {
+        height: 260px;
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .container {
+    max-width: 670px;
+  }
+
+  .ai-header {
+    font-size: 40px;
+    line-height: 52px;
+  }
+
+  .ai {
+    .ai-img {
+      img {
+        height: 450px;
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .container {
+    max-width: 600px;
+  }
+
+  .navbar {
+    // .hamburger-content {
+
+    // }
+    .nav-right {
+      display: none;
+    }
+    .hamburger {
+      display: flex;
+    }
+
+    .navbar {
+      .show {
+        display: flex !important;
+
+        .active {
+          display: flex;
+        }
+      }
+    }
+  }
+
+  .ai {
+    flex-direction: column;
+    align-items: center;
+
+    .left-side {
+      max-width: 90%;
+      gap: 20px;
+    }
+
+    .ai-img {
+      max-width: 90%;
+    }
+  }
+}
+
+@media (max-width: 660px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    max-width: 480px;
+  }
+}
