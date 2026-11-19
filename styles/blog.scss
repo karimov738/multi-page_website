@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import "utilities";
+@import "variables";
+@import "globalStyles";
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+// ============= OUR BLOG SECTION ================
+
+.blog {
+    @include flexCenter;
+    flex-direction: column;
+    padding: 130px 0 30px;
+    text-align: center;
+
+    .blog-content {
+        @include flexCenter;
+        gap: 25px;
+        width: 60%;
+        flex-direction: column;
+
+        .blog-mini-header {
+            font-weight: 700;
+        }
+
+        .blog-header {
+            @include topHeader;
+            width: 90%;
+        }
+
+        .blog-text {
+            line-height: 150%;
+            font-size: 16px;
+            width: 100%;
+        }
+    }
+}
+
+.recent-cards,
+.popular-cards,
+.popular-cards-low {
+    @include flexCenter;
+    gap: 16px;
+    padding-top: 40px;
+
+    @include mainCard;
+}
+
+
+@import "media";
+
+// ============================= BLOG MEDIA ===============================
+
+@media (max-width: 1024px) {
+    .blog {
+        .blog-content {
+            .blog-mini-header {
+                font-size: 11px;
+            }
+
+            .blog-text {
+                font-size: 11px;
+            }
+        }
+    }
+}

@@ -15,7 +15,7 @@ window.addEventListener('scroll', function () {
         // hamContent.style.boxShadow = '0px 1px 15px -10px #6b6b6b';
     }
     else {
-        navbar.style.boxshadow = 'none';
+        navbar.style.boxShadow = 'none';
     }
 })
 

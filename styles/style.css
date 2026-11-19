@@ -615,12 +615,24 @@ a {
 .popular-cards-low .card .card-text {
   font-family: "roboto";
 }
-@media (max-width: 540px) {
+@media (max-width: 750px) {
+  .recent-cards .card,
+  .popular-cards .card,
+  .popular-cards-low .card {
+    height: 610px;
+  }
+}
+@media (max-width: 600px) {
   .recent-cards .card,
   .popular-cards .card,
   .popular-cards-low .card {
     min-height: 450px;
     width: 90%;
+  }
+  .recent-cards .card img,
+  .popular-cards .card img,
+  .popular-cards-low .card img {
+    min-height: 260px;
   }
 }
 
@@ -805,6 +817,11 @@ a {
   .ai .ai-img {
     max-width: 90%;
   }
+  .recent-cards .card img,
+  .popular-cards .card img,
+  .popular-cards-low .card img {
+    height: 220px;
+  }
 }
 @media (max-width: 710px) {
   .form .form-content {
@@ -842,6 +859,17 @@ a {
   .ai .ai-img img {
     height: 350px;
   }
+  .recent-cards,
+  .popular-cards,
+  .popular-cards-low {
+    flex-direction: column;
+  }
+  .recent-cards .card,
+  .popular-cards .card,
+  .popular-cards-low .card {
+    justify-content: unset;
+    max-height: 450px;
+  }
 }
 @media (max-width: 540px) {
   .container {
@@ -874,17 +902,6 @@ a {
   }
   .recent .recent-low {
     display: none;
-  }
-  .recent-cards,
-  .popular-cards,
-  .popular-cards-low {
-    flex-direction: column;
-  }
-  .recent-cards .card,
-  .popular-cards .card,
-  .popular-cards-low .card {
-    justify-content: unset;
-    max-height: 450px;
   }
 }
 @media (max-width: 480px) {

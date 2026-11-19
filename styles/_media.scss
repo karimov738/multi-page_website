@@ -60,6 +60,8 @@
     max-width: 882px;
   }
 
+
+
   .recent-cards,
   .popular-cards,
   .popular-cards-low {
@@ -252,6 +254,16 @@
       max-width: 90%;
     }
   }
+
+  .recent-cards,
+  .popular-cards,
+  .popular-cards-low {
+    .card {
+      img {
+        height: 220px;
+      }
+    }
+  }
 }
 
 @media (max-width: 710px) {
@@ -306,6 +318,17 @@
       }
     }
   }
+
+  .recent-cards,
+  .popular-cards,
+  .popular-cards-low {
+    flex-direction: column;
+
+    .card {
+      justify-content: unset;
+      max-height: 450px;
+    }
+  }
 }
 
 @media (max-width: 540px) {
@@ -347,18 +370,6 @@
       display: none;
     }
   }
-
-  .recent-cards,
-  .popular-cards,
-  .popular-cards-low {
-    flex-direction: column;
-
-    .card {
-      justify-content: unset;
-      max-height: 450px;
-    }
-  }
-
 
 }
 
