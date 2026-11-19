@@ -11,7 +11,7 @@
   @include flexCenter;
   justify-content: space-between;
   align-items: unset;
-  padding: 122px 0 98px;
+  padding: 140px 0 78px;
   color: #fff;
   gap: 40px;
 
@@ -80,73 +80,62 @@
 // ============= VR SECTION ================
 .vr {
   padding: 130px 0 80px;
-  display: flex;
-  align-items: flex-end;
-  flex-direction: column;
 
-  .vr-bg {
-    background-image: url("../images/guy_with_vr.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 576px;
-    max-height: 576px;
-    position: relative;
-    border-radius: 16px;
-  }
+  .vr-content {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
 
-  .vr-card {
-    display: grid;
-    gap: 20px;
-    position: relative;
-    right: 0;
-    bottom: 0;
-    min-height: 360px;
-    max-width: 75%;
-    background-color: #fff;
-    margin-top: -240px;
-    padding: 32px 0 42px 32px;
-    border-radius: 16px;
-    box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.1);
-    @include roboto;
-
-    // .dev-and-date {
-    //     @include flexCenter;
-    //     justify-content: start;
-    //     gap: 8px;
-
-    //     .development {
-    //         @include classDevelopment;
-    //     }
-
-    //     .date {
-    //         @include date;
-    //     }
-    // }
-
-    .vr-header {
-      font-weight: 700;
-      font-size: 32px;
-      line-height: 45px;
-      max-width: 90%;
-      font-family: "raleway";
+    .vr-bg {
+      background-image: url("../images/guy_with_vr.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 576px;
+      max-height: 576px;
+      position: relative;
+      border-radius: 16px;
     }
 
-    .vr-text {
-      color: $grey;
-      max-width: 90%;
-    }
+    .vr-card {
+      display: grid;
+      gap: 20px;
+      position: relative;
+      right: 0;
+      bottom: 0;
+      min-height: 360px;
+      max-width: 75%;
+      background-color: #fff;
+      margin-top: -240px;
+      padding: 32px 0 42px 32px;
+      border-radius: 16px;
+      box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.1);
+      @include roboto;
 
-    .vr-btn {
-      .btn-main {
-        @include btn-main;
-        border: 2px solid $Primary-color;
-        background-color: #fff;
-        color: $Primary-color;
+      .vr-header {
+        @include innerHeader;
+        max-width: 90%;
+        font-family: "raleway";
+      }
+
+      .vr-text {
+        color: $grey;
+        max-width: 90%;
+      }
+
+      .vr-btn {
+        .btn-main {
+          @include btn-main;
+          border: 1px solid $Primary-color;
+          background-color: #fff;
+          color: $Primary-color;
+        }
       }
     }
   }
+
+
 }
 
 // ============= RECENT SECTION ================
@@ -156,7 +145,7 @@
     @include flexCenter;
     justify-content: space-between;
 
-    h1 {
+    .recent-top-header {
       @include topHeader;
     }
 
@@ -205,6 +194,7 @@
           background-color: #fff;
           color: $Primary-color;
           border: 1px solid $Primary-color;
+
           @include roboto;
         }
       }
@@ -221,7 +211,7 @@
 .popular-cards-low {
   @include flexCenter;
   gap: 16px;
-  padding: 40px 0;
+  padding-top: 40px;
 
   @include mainCard;
 }
@@ -235,7 +225,7 @@
 .popular {
   @include flexCenter;
   justify-content: space-between;
-  padding: 30px 0 10px;
+  padding: 50px 0 0;
 
   .popular-header {
     @include topHeader;

@@ -32,6 +32,7 @@ a {
 }
 
 .main-p {
+  font-size: 11px;
   line-height: 150%;
   color: $grey;
 }
@@ -62,16 +63,6 @@ a {
   }
 }
 
-.logo {
-  @include flexCenter;
-
-  span {
-    font-size: 34px;
-    font-weight: 800;
-    padding-left: 15px;
-  }
-}
-
 .ai-header {
   font-weight: 700;
   font-size: 64px;
@@ -81,43 +72,61 @@ a {
 
 // ============= NAVBAR SECTION ================
 .navbar {
+  position: fixed;
+  background: #fff;
+  max-width: 100% !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0 30px;
+  z-index: 1;
+
+  .logo {
+    @include flexCenter;
+    gap: 10px;
+
+    span {
+      font-size: 34px;
+      font-weight: 800;
+    }
+  }
+
   .navbar-content {
     @include flexCenter;
     justify-content: space-between;
-    padding: 21px 5px 21px 0;
+    padding: 15px 5px 15px 0;
 
     .hamburger-content {
       display: none;
       position: absolute;
       width: 100%;
-      background-color: $Primary-color;
+      background-color: #fff;
       justify-content: flex-start;
-      top: 11%;
+      top: 100%;
       left: 0;
-      padding: 20px;
+      box-shadow: 0px 5px 15px -10px #6b6b6b;
 
-      .active {
+      ul.active {
         display: none;
-        ul {
-          display: flex;
-          flex-direction: column;
-          width: 100%;
+        flex-direction: column;
+        width: 100%;
 
-          li {
-            padding: 20px;
+        li {
+          padding: 25px 15px;
 
-            a {
-              color: #fff;
-            }
+          a {
+            color: $Primary-color;
           }
+        }
 
-          li:hover {
-            background-color: #6a43c5;
-            cursor: pointer;
-          }
-          .ham-button {
-            padding: 10px;
-          }
+        li:hover {
+          background-color: #f3efff;
+          cursor: pointer;
+          transition: 0.1s ease-in;
+        }
+
+        .ham-button {
+          padding: 10px;
         }
       }
 
@@ -129,10 +138,9 @@ a {
 
       .btn-purple {
         @include btn-main;
-        color: #373737;
-        background-color: #fff;
+        color: #fff;
         padding: 16px 48px;
-        // @include p1648;
+        // @include p1648;;
       }
 
       .active {
@@ -156,6 +164,12 @@ a {
             }
           }
 
+          // li:hover {
+          //   background-color: #f3efff;
+          //   cursor: pointer;
+          //   transition: 0.1s ease-in;
+          // }
+
           li:first-child {
             a {
               color: $Primary-color;
@@ -177,6 +191,7 @@ a {
     height: 50px;
     cursor: pointer;
     padding: 5px;
+    z-index: 1;
   }
 }
 
@@ -189,6 +204,7 @@ a {
   margin-inline: auto;
   text-align: center;
   color: #fff;
+  margin: 70px 0 0;
 
   .form-content {
     @include flexCenter;
@@ -198,32 +214,41 @@ a {
     flex-direction: column;
 
     .form-header {
-      font-weight: 700;
-      font-size: 52px;
+      @include topHeader;
     }
 
     form {
       display: flex;
-      width: 65%;
+      width: 70%;
       gap: 8px;
 
       input {
         width: 65%;
-        padding: 20px;
+        padding: 12px 0 12px 15px;
         border-radius: 8px;
         border: none;
+        font-size: 10px;
       }
 
       .btn-main {
         @include btn-main;
-        padding: 20px 34px;
         border: 2px solid #fff;
+        padding: 14px 24px;
+        font-size: 9px;
       }
     }
 
     .form-text {
       color: #bbb;
     }
+  }
+
+
+}
+
+@media (max-width: 800px) {
+  .form {
+    padding: 70px 0;
   }
 }
 
@@ -238,10 +263,15 @@ a {
   .footer-top {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 40px;
     width: 100%;
     border-bottom: 1px solid $Primary-color;
     padding-bottom: 40px;
+
+    .logo {
+      @include logo;
+    }
 
     .f-links {
       ul {
@@ -271,6 +301,21 @@ a {
             font-weight: 700;
             color: #fff;
           }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .footer {
+    .footer-top {
+      .f-links {
+        ul {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 30px;
         }
       }
     }
