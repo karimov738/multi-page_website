@@ -11,7 +11,7 @@ button.addEventListener('click', function () {
 
 window.addEventListener('scroll', function () {
     if (window.scrollY > 0) {
-        navbar.style.boxShadow = '0px 1px 15px 0px #6b6b6b';
+        navbar.style.boxShadow = '0px 1px 15px 0px #fdf1ff';
         // hamContent.style.boxShadow = '0px 1px 15px -10px #6b6b6b';
     }
     else {
@@ -20,7 +20,7 @@ window.addEventListener('scroll', function () {
 })
 
 function reportWindowSize() {
-    if (window.innerWidth > 810) {
+    if (window.innerWidth > 820) {
         hamContent.classList.remove('show')
         ul.classList.remove('active')
     }
