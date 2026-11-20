@@ -200,6 +200,27 @@
 }
 
 @media (max-width: 810px) {
+
+  .navbar {
+    .navbar-content {
+      .show {
+        display: flex;
+
+        .active {
+          display: flex !important;
+        }
+      }
+    }
+
+    .nav-right {
+      display: none;
+    }
+
+    .hamburger {
+      display: flex;
+    }
+  }
+
   .form {
     .form-content {
       width: 75%;
@@ -217,10 +238,6 @@
   }
 
   .navbar {
-    // .hamburger-content {
-
-    // }
-
     .navbar-content {
       .show {
         display: flex;

@@ -5,7 +5,7 @@
 @import "variables";
 @import "globalStyles";
 
-
+// ============= CREATIVE BLOG SECTION ================
 .blog {
     @include flexCenter;
     flex-direction: column;
@@ -48,18 +48,123 @@
     }
 }
 
+@media (max-width: 750px) {
+    .blog {
+        .blog-content {
+            width: 100%;
+
+            .blog-header {
+                line-height: 32px;
+            }
+
+            .blog-text {
+                font-size: 10px;
+            }
+        }
+
+        .blog-img {
+            height: 400px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .blog {
+        .blog-img {
+            height: 300px;
+        }
+    }
+}
 
 
+// ================= OUR TEAM WORK SECTION ==================
+.our-work {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 70px 0 130px;
+    gap: 30px;
 
+    .team-top {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        width: 98%;
 
+        .dev-and-date {
+            font-weight: 700;
+            color: $grey;
+        }
 
+        .top-text-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
 
+            .team-header {
+                @include topHeader;
+                color: $dark-grey;
+                width: 40%;
+            }
 
+            .top-right-text {
+                font-family: roboto;
+                font-size: 16px;
+                // padding-top: 20px;
+                width: 34%;
+            }
+        }
+    }
 
+    .team-cards {
+        display: flex;
+        padding-top: 40px;
+        gap: 16px;
 
+        @include aboutCards;
 
+        .t-card:first-child {
+            background-color: $Primary-color;
+            color: #fff;
 
+            .t-num {
+                opacity: 100%;
+                color: #fff;
+            }
 
+            .t-card-text {
+                color: #F7F6FE;
+            }
+        }
+    }
+}
+
+@media (max-width: 660px) {
+    .our-work {
+        .team-top {
+            .top-text-content {
+                flex-direction: column;
+                align-items: start;
+                gap: 20px;
+
+                .team-header {
+                    width: 100%;
+                }
+
+                .top-right-text{
+                    width: 100%;
+                }
+            }
+        }
+        .team-cards {
+            flex-direction: column;
+
+            .t-card {
+                padding: 20px 0;
+            }
+        }
+    }
+}
 
 
 

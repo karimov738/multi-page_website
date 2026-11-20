@@ -160,3 +160,94 @@
         }
     }
 }
+
+
+
+// ====================== ABOUT US CARDS ==========================
+
+@mixin aboutCards() {
+    .t-card {
+        display: flex;
+        justify-content: center;
+        border-radius: 16px;
+        width: 33%;
+        // max-width: 400px;
+        // min-height: 400px;
+        padding: 4px;
+
+        .t-card-content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 90%;
+
+            .t-num {
+                font-weight: 700;
+                font-size: 72px;
+                line-height: 96px;
+                color: #666666;
+                opacity: 10%;
+            }
+
+            .t-card-header {
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 32px;
+                color: $Primary-color;
+            }
+
+            .t-card-text {
+                font-size: 16px;
+                font-family: roboto;
+                font-weight: 400;
+                color: $grey;
+                line-height: 150%;
+                opacity: 70%;
+            }
+
+            .learn-more {
+                li {
+                    list-style-type: none;
+
+                    a {
+                        color: #fff;
+                        font-family: roboto;
+                        border-bottom: 5px solid;
+                        padding-bottom: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1110px) {
+        .t-card {
+            width: 94%;
+
+            .t-card-content {
+                gap: 10px;
+
+                .t-num {
+                    font-size: 52px;
+                    line-height: 68px;
+                }
+
+                .t-card-header {
+                    font-size: 17px;
+                }
+
+                .t-card-text {
+                    font-size: 11px;
+                }
+
+                .learn-more {
+                    li {
+                        a {
+                            font-size: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

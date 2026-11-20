@@ -82,13 +82,18 @@ a {
   z-index: 1;
 
   .logo {
-    @include flexCenter;
-    gap: 10px;
+    a {
+      @include flexCenter;
+      gap: 10px;
 
-    span {
-      font-size: 34px;
-      font-weight: 800;
+      span {
+        font-size: 34px;
+        font-weight: 800;
+        color: $dark-grey;
+      }
     }
+
+
   }
 
   .navbar-content {
@@ -116,6 +121,7 @@ a {
 
           a {
             color: $Primary-color;
+            width: 100%;
           }
         }
 
@@ -157,18 +163,19 @@ a {
           justify-content: space-between;
 
           li {
-            padding: 0 22px;
+            padding: 16px 16px 16px 12px;
 
             a {
               color: $dark-grey;
+              padding: 10px 20px;
             }
           }
 
-          // li:hover {
-          //   background-color: #f3efff;
-          //   cursor: pointer;
-          //   transition: 0.1s ease-in;
-          // }
+          li:hover {
+            background-color: #f3efff;
+            cursor: pointer;
+            transition: 0.2s ease-in;
+          }
 
           li:first-child {
             a {
