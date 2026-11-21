@@ -548,6 +548,9 @@ a {
   background-color: #7C4EE4;
   color: #fff;
 }
+.our-work .team-cards .t-card:first-child .t-card-header {
+  color: #fff;
+}
 .our-work .team-cards .t-card:first-child .t-num {
   opacity: 100%;
   color: #fff;
