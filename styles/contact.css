@@ -508,7 +508,7 @@ a {
   padding: 100px 0;
 }
 .contact-form .form-bg {
-  background-image: url(/images/map.jpg);
+  background-image: url(../images/map.jpg);
   background-size: cover;
   background-position: center;
   height: 547px;
