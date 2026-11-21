@@ -191,7 +191,6 @@ a {
   padding: 20px;
 }
 .navbar .navbar-content .nav-right .nav-links ul li:hover {
-  background-color: #f3efff;
   cursor: pointer;
 }
 .navbar .navbar-content .nav-right .nav-links ul li:hover a {
@@ -365,9 +364,8 @@ a {
   padding: 10px 0;
 }
 .footer .footer-top .f-links ul li:hover {
-  background-color: #f3efff;
   cursor: pointer;
-  transition: 0.2s ease-in;
+  transition: 0.3s ease-in;
 }
 .footer .footer-top .f-links ul li:hover a {
   color: #7C4EE4;
