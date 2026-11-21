@@ -489,7 +489,7 @@ a {
   font-weight: 500;
 }
 .blog-vr .vr-low-content .vr-guy {
-  background-image: url(/images/vr-guy_2.jpg);
+  background-image: url(../images/vr-guy_2.jpg);
   width: 74%;
   height: 312px;
   background-position: center;

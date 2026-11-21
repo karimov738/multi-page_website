@@ -458,7 +458,7 @@ a {
   font-size: 16px;
 }
 .blog .blog-img {
-  background-image: url(/images/dev_team.jpg);
+  background-image: url(../images/dev_team.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
