@@ -20,7 +20,7 @@ window.addEventListener('scroll', function () {
 })
 
 function reportWindowSize() {
-    if (window.innerWidth > 820) {
+    if (window.innerWidth > 830) {
         hamContent.classList.remove('show')
         ul.classList.remove('active')
     }

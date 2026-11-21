@@ -9,6 +9,10 @@
     align-items: center;
 }
 
+// @mixin navHover() {
+
+// }
+
 @mixin btn-main() {
     padding: 14px 32px;
     background-color: $Primary-color;
@@ -18,6 +22,49 @@
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
+    transition: 0.3s ease-in-out;
+    border: 1px solid #7C4EE4;
+}
+
+@mixin purpleBtnHover() {
+    .btn-main:hover {
+        background-color: #fff;
+        color: $Primary-color;
+        border: 1px solid $Primary-color;
+        transform: scale(1.03);
+    }
+}
+
+@mixin whiteBtnHover() {
+    .btn-main:hover {
+        background-color: $dark-grey;
+        color: #fff;
+        border: 1px solid $dark-grey;
+    }
+}
+
+@mixin recentBtnHover() {
+    .btn-main:hover {
+        background-color: $Primary-color;
+        color: #fff;
+        border: 1px solid #fff;
+    }
+}
+
+@mixin formBtnHover() {
+    .btn-main:hover {
+        background-color: #fff;
+        color: $Primary-color;
+    }
+}
+
+@mixin readMore() {
+    .read-more:hover {
+        a {
+            color: #5c3ba8;
+        }
+
+    }
 }
 
 @mixin p1648 {
@@ -99,12 +146,20 @@
 }
 
 @mixin logo() {
-    @include flexCenter;
+    a {
+        @include flexCenter;
 
-    span {
-        font-size: 34px;
-        font-weight: 800;
-        padding-left: 15px;
+        span {
+            font-size: 34px;
+            font-weight: 800;
+            color: $dark-grey;
+            transition: 0.3s ease-in-out;
+            padding: 0 10px;
+        }
+
+        span:hover {
+            color: $Primary-color;
+        }
     }
 
     @media (max-width: 1024px) {
@@ -119,13 +174,13 @@
     .card {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-around;
         width: 32%;
         height: 360px;
-        gap: 20px;
+        // gap: 20px;
         min-height: 660px;
         padding: 20px 0;
-        
+
         img {
             width: 100%;
             height: 360px;
@@ -141,11 +196,25 @@
         .card-text {
             @include roboto;
         }
+
+        @include readMore;
     }
 
-    @media (max-width: 750px) {
+    @media (max-width: 1024px) {
         .card {
-            height: 610px;
+            min-height: 590px;
+        }
+    }
+
+    @media (max-width: 1000px) {
+        .card {
+            min-height: 560px;
+        }
+    }
+
+    @media (max-width: 930px) {
+        .card {
+            min-height: 490px;
         }
     }
 
@@ -156,6 +225,10 @@
 
             img {
                 min-height: 260px;
+            }
+
+            .card-text {
+                padding: 5px 0;
             }
         }
     }
@@ -253,4 +326,3 @@
 }
 
 // ====================== CONTACT PAGE CARDS ==========================
-
