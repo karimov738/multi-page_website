@@ -8,6 +8,7 @@
 
 body {
   font-family: "raleway";
+  overflow-x: hidden;
 }
 
 .container {
@@ -29,9 +30,43 @@ a {
 
 .purple-bg {
   background-color: $Primary-color;
+  padding-top: 50px;
+
+}
+
+.top-lines {
+  position: absolute;
+  overflow-x: hidden;
+  width: 1340px;
+  height: 347px;
+  top: -120px;
+  left: -750px;
+  opacity: 20%;
+  border-radius: 50%;
+  // transform: scale(1.1);
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+
+.low-lines {
+  position: absolute;
+  overflow-x: hidden;
+  width: 1340px;
+  border-radius: 50%;
+  bottom: 380px;
+  right: -980px;
+  opacity: 20%;
+  z-index: 0;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
 }
 
 .main-p {
+  font-weight: 400;
   font-size: 16px;
   line-height: 150%;
   color: $grey;
@@ -41,7 +76,7 @@ a {
   @include flexCenter;
   @include roboto;
   justify-content: start;
-  gap: 8px;
+  gap: 10px;
 
   .development {
     @include classDevelopment;
@@ -57,6 +92,10 @@ a {
   font-size: 18px;
   line-height: 150%;
 
+  @media (max-width: 1024px) {
+    font-size: 13px;
+  }
+
   a {
     color: $Primary-color;
     text-decoration: underline;
@@ -70,6 +109,11 @@ a {
   line-height: 86px;
 }
 
+.link-active {
+  color: $Primary-color !important;
+  // transform: scale(1.2);
+  // transition: 0.3s ease-in-out;
+}
 
 // ============= NAVBAR SECTION ================
 .navbar {
@@ -79,8 +123,7 @@ a {
   top: 0;
   left: 0;
   right: 0;
-  padding: 0 30px;
-  z-index: 1;
+  z-index: 1488;
 
   .logo {
     @include logo;
@@ -99,7 +142,7 @@ a {
       justify-content: flex-start;
       top: 100%;
       left: 0;
-      box-shadow: 0px 5px 15px -10px #6b6b6b;
+      box-shadow: -1px 5px 15px -15px #6b6b6b;
 
       ul.active {
         display: none;
@@ -148,27 +191,14 @@ a {
           @include flexCenter;
           justify-content: space-between;
 
-          li {
-            padding: 16px 6px;
+          a {
+            padding: 10px 20px;
             transition: 0.3s ease-in-out;
-            
-
-            a {
-              color: $dark-grey;
-              padding: 20px;
-              
-            }
+            color: $dark-grey;
           }
 
-          li:hover {
-            // background-color: #f3efff;
-            cursor: pointer;
-            
-
-            a {
-              
-              color: $Primary-color;
-            }
+          a:hover {
+            color: $Primary-color;
           }
 
           // li:first-child {
@@ -228,15 +258,17 @@ a {
 
     .form-header {
       @include topHeader;
+      color: #fff;
     }
 
     form {
       display: flex;
+      justify-content: center;
       width: 70%;
       gap: 8px;
 
       input {
-        width: 65%;
+        width: 50%;
         padding: 12px 0 12px 15px;
         border-radius: 8px;
         border: none;
@@ -248,16 +280,38 @@ a {
         border: 2px solid #fff;
         padding: 14px 24px;
         font-size: 9px;
+        width: 25%;
       }
 
       @include formBtnHover;
+
+      @media (max-width: 600px) {
+        input {
+          width: 60%;
+        }
+
+        .btn-main {
+          width: 35%;
+        }
+      }
     }
 
     .form-text {
       color: #bbb;
+      width: 65%;
     }
   }
 
+  .top-lines{
+    top: 4530px;
+    left: -800px;
+  }
+
+  .low-lines {
+    bottom: -4020px;
+    right: -800px;
+    border-radius: 45%;
+  }
 
 }
 
@@ -338,6 +392,7 @@ a {
           background-color: #f3f3f3;
           transition: 0.3s ease-in-out;
           box-shadow: 0px 1px 10px 5px #d6c5ff;
+
           a {
             color: $Primary-color;
           }

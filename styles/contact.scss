@@ -36,7 +36,7 @@
         flex-direction: column;
         align-items: center;
         width: 32%;
-        box-shadow: 1px 15px 10px 10px rgba(124, 78, 228, 0.0392156863);
+        box-shadow: 1px 0px 10px 10px rgba(124, 78, 228, 0.0392156863);
         gap: 20px;
         padding: 40px 30px;
         text-align: center;
@@ -98,6 +98,7 @@
     .touch-cards {
         align-items: center;
         flex-direction: column;
+        gap: 30px;
 
         .t-card {
             width: 80%;

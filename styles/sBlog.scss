@@ -11,12 +11,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 120px 0;
+    padding: 100px 0 70px;
     gap: 60px;
 
     .vr-top-content,
     .vr-low-content {
         width: 83%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
 
         .vr-header {
             @include topHeader;
@@ -48,6 +51,10 @@
 
         .low-text {
             font-size: 16px;
+
+            @media (max-width: 1024px) {
+                font-size: 13px;
+            }
         }
 
         .quote {
@@ -59,17 +66,29 @@
             .quote-text-content {
                 display: flex;
                 flex-direction: column;
-                gap: 30px;
+                gap: 15px;
 
                 .quote-text {
                     font-size: 24px;
+                    font-weight: 400;
                     line-height: 40px;
                     color: #666;
                     font-style: italic;
+                    padding: 12px 0 12px 20px;
+                    border-left: 4px solid $Primary-color;
                 }
 
                 .quote-author {
                     font-weight: 500;
+                    line-height: 150%;
+                    padding-left: 20px;
+                }
+
+                @media (max-width: 1024px) {
+                    .quote-text {
+                        font-size: 20px;
+                        line-height: 33px;
+                    }
                 }
             }
         }
@@ -85,12 +104,87 @@
     }
 }
 
+@media (max-width: 1024px) {
+    .blog-vr {
+        padding: 110px 0 30px;
+
+        .vr-top-content {
+            width: 100%;
+            gap: 10px;
+
+            .dev-and-date {
+                padding: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .blog-vr {
+        .vr-low-content {
+            width: 100%;
+            align-items: unset;
+
+            .quote {
+                .quote-text-content {
+                    border-left: 4px solid $Primary-color;
+                    padding: 10px;
+
+                    .quote-text,
+                    .quote-author {
+                        border: none;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ==================== CARDS ===================
+
+.popular {
+    @include flexCenter;
+    justify-content: space-between;
+    padding: 50px 0 0;
+
+    .popular-header {
+        @include topHeader;
+    }
+
+    .btn-main {
+        @include btn-main;
+        @include p1648;
+    }
+
+    @include purpleBtnHover;
+}
+
 .popular-cards-low {
     @include flexCenter;
     gap: 16px;
     padding-top: 40px;
 
     @include mainCard;
+
+    @media (max-width: 600px) {
+        display: none;
+    }
+}
+
+.s_blog_recent-cards {
+    @include flexCenter;
+    display: none;
+    gap: 16px;
+    padding-top: 40px;
+
+    @include mainCard;
+
+    @media (max-width: 600px) {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
 }
 
 

@@ -10,6 +10,7 @@
 
 body {
   font-family: "raleway";
+  overflow-x: hidden;
 }
 
 .container {
@@ -27,9 +28,43 @@ a {
 
 .purple-bg {
   background-color: #7C4EE4;
+  padding-top: 50px;
+}
+
+.top-lines {
+  position: absolute;
+  overflow-x: hidden;
+  width: 1340px;
+  height: 347px;
+  top: -120px;
+  left: -750px;
+  opacity: 20%;
+  border-radius: 50%;
+}
+@media (max-width: 1024px) {
+  .top-lines {
+    display: none;
+  }
+}
+
+.low-lines {
+  position: absolute;
+  overflow-x: hidden;
+  width: 1340px;
+  border-radius: 50%;
+  bottom: 380px;
+  right: -980px;
+  opacity: 20%;
+  z-index: 0;
+}
+@media (max-width: 1024px) {
+  .low-lines {
+    display: none;
+  }
 }
 
 .main-p {
+  font-weight: 400;
   font-size: 16px;
   line-height: 150%;
   color: #666666;
@@ -41,7 +76,7 @@ a {
   align-items: center;
   font-family: "roboto";
   justify-content: start;
-  gap: 8px;
+  gap: 10px;
 }
 .dev-and-date .development {
   font-weight: 700;
@@ -73,6 +108,11 @@ a {
   font-size: 18px;
   line-height: 150%;
 }
+@media (max-width: 1024px) {
+  .read-more {
+    font-size: 13px;
+  }
+}
 .read-more a {
   color: #7C4EE4;
   text-decoration: underline;
@@ -85,6 +125,10 @@ a {
   line-height: 86px;
 }
 
+.link-active {
+  color: #7C4EE4 !important;
+}
+
 .navbar {
   position: fixed;
   background: #fff;
@@ -92,8 +136,7 @@ a {
   top: 0;
   left: 0;
   right: 0;
-  padding: 0 30px;
-  z-index: 1;
+  z-index: 1488;
 }
 .navbar .logo a {
   display: flex;
@@ -130,7 +173,7 @@ a {
   justify-content: flex-start;
   top: 100%;
   left: 0;
-  box-shadow: 0px 5px 15px -10px #6b6b6b;
+  box-shadow: -1px 5px 15px -15px #6b6b6b;
 }
 .navbar .navbar-content .hamburger-content ul.active {
   display: none;
@@ -160,7 +203,7 @@ a {
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  transition: 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
   border: 1px solid #7C4EE4;
   color: #fff;
   padding: 16px 48px;
@@ -183,18 +226,12 @@ a {
   align-items: center;
   justify-content: space-between;
 }
-.navbar .navbar-content .nav-right .nav-links ul li {
-  padding: 16px 6px;
+.navbar .navbar-content .nav-right .nav-links ul a {
+  padding: 10px 20px;
   transition: 0.3s ease-in-out;
-}
-.navbar .navbar-content .nav-right .nav-links ul li a {
   color: #333333;
-  padding: 20px;
 }
-.navbar .navbar-content .nav-right .nav-links ul li:hover {
-  cursor: pointer;
-}
-.navbar .navbar-content .nav-right .nav-links ul li:hover a {
+.navbar .navbar-content .nav-right .nav-links ul a:hover {
   color: #7C4EE4;
 }
 .navbar .navbar-content .nav-right .nav-links ul .btn-main {
@@ -206,7 +243,7 @@ a {
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  transition: 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
   border: 1px solid #7C4EE4;
   padding: 16px 48px;
 }
@@ -268,6 +305,7 @@ a {
   font-weight: 700;
   font-size: 48px;
   line-height: 50px;
+  color: #333333;
 }
 @media (max-width: 1024px) {
   .form .form-content .form-header {
@@ -281,13 +319,17 @@ a {
     line-height: 36px;
   }
 }
+.form .form-content .form-header {
+  color: #fff;
+}
 .form .form-content form {
   display: flex;
+  justify-content: center;
   width: 70%;
   gap: 8px;
 }
 .form .form-content form input {
-  width: 65%;
+  width: 50%;
   padding: 12px 0 12px 15px;
   border-radius: 8px;
   border: none;
@@ -302,19 +344,38 @@ a {
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  transition: 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
   border: 1px solid #7C4EE4;
   border: 2px solid #fff;
   padding: 14px 24px;
   font-size: 9px;
+  width: 25%;
 }
 .form .form-content form .btn-main:hover {
   background-color: #fff;
   color: #7C4EE4;
   box-shadow: 0px 1px 10px 1px #d6c5ff;
 }
+@media (max-width: 600px) {
+  .form .form-content form input {
+    width: 60%;
+  }
+  .form .form-content form .btn-main {
+    width: 35%;
+  }
+}
 .form .form-content .form-text {
   color: #bbb;
+  width: 65%;
+}
+.form .top-lines {
+  top: 4530px;
+  left: -800px;
+}
+.form .low-lines {
+  bottom: -4020px;
+  right: -800px;
+  border-radius: 45%;
 }
 
 @media (max-width: 800px) {
@@ -431,6 +492,7 @@ a {
   font-weight: 700;
   font-size: 48px;
   line-height: 50px;
+  color: #333333;
 }
 @media (max-width: 1024px) {
   .touch .touch-content .touch-header {
@@ -454,7 +516,7 @@ a {
   flex-direction: column;
   align-items: center;
   width: 32%;
-  box-shadow: 1px 15px 10px 10px rgba(124, 78, 228, 0.0392156863);
+  box-shadow: 1px 0px 10px 10px rgba(124, 78, 228, 0.0392156863);
   gap: 20px;
   padding: 40px 30px;
   text-align: center;
@@ -504,6 +566,7 @@ a {
   .touch-cards {
     align-items: center;
     flex-direction: column;
+    gap: 30px;
   }
   .touch-cards .t-card {
     width: 80%;
@@ -566,7 +629,7 @@ a {
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  transition: 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
   border: 1px solid #7C4EE4;
   padding: 20px 36px;
   border-radius: 4px;
@@ -637,14 +700,24 @@ a {
   .container {
     max-width: 882px;
   }
+  .vr {
+    padding: 60px 0 30px;
+  }
+  .recent .recent-low {
+    padding: 50px 0 30px;
+  }
   .recent-cards,
   .popular-cards,
   .popular-cards-low {
+    padding-top: 20px;
     gap: 10px;
   }
   .ai-header {
     font-size: 46px;
     line-height: 62px;
+  }
+  .form {
+    margin: 30px 0 0;
   }
 }
 @media (max-width: 1000px) {
@@ -699,15 +772,6 @@ a {
   .container {
     max-width: 670px;
   }
-  .ai-header {
-    font-size: 40px;
-    line-height: 52px;
-  }
-  .ai .ai-img img {
-    height: 450px;
-  }
-}
-@media (max-width: 830px) {
   .navbar .navbar-content .show {
     display: flex;
   }
@@ -720,6 +784,15 @@ a {
   .navbar .hamburger {
     display: flex;
   }
+  .ai-header {
+    font-size: 40px;
+    line-height: 52px;
+  }
+  .ai .ai-img img {
+    height: 450px;
+  }
+}
+@media (max-width: 830px) {
   .form .form-content {
     width: 75%;
   }

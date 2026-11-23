@@ -22,7 +22,7 @@
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
-    transition: 0.3s ease-in-out;
+    transition: 0.2s ease-in-out;
     border: 1px solid #7C4EE4;
 }
 
@@ -109,6 +109,7 @@
     font-weight: 700;
     font-size: 48px;
     line-height: 50px;
+    color: $dark-grey;
 
     @media (max-width: 1024px) {
         font-size: 34px;
@@ -126,6 +127,7 @@
     font-weight: 700;
     font-size: 32px;
     line-height: 45px;
+    color: $dark-grey;
 
     @media (max-width: 1024px) {
         font-size: 23px;

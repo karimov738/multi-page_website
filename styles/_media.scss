@@ -60,44 +60,31 @@
     max-width: 882px;
   }
 
+  .vr {
+    padding: 60px 0 30px;
+  }
 
+  .recent {
+    .recent-low {
+      padding: 50px 0 30px;
+    }
+  }
 
   .recent-cards,
   .popular-cards,
   .popular-cards-low {
+    padding-top: 20px;
     gap: 10px;
   }
-
-  // .recent {
-  //   .recent-low {
-  //     .recent-right {
-  //       .recent-header {
-  //         font-weight: 700;
-  //         font-size: 22px;
-  //       }
-  //     }
-  //   }
-  // }
-
-  // .footer{
-  //   .footer-top{
-  //     .f-links{
-  //       ul{
-  //         li{
-  //           a{
-  //             font-size: 12px;
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
 
   .ai-header {
     font-size: 46px;
     line-height: 62px;
   }
 
+  .form{
+    margin: 30px 0 0;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -185,22 +172,6 @@
     max-width: 670px;
   }
 
-  .ai-header {
-    font-size: 40px;
-    line-height: 52px;
-  }
-
-  .ai {
-    .ai-img {
-      img {
-        height: 450px;
-      }
-    }
-  }
-}
-
-@media (max-width: 830px) {
-
   .navbar {
     .navbar-content {
       .show {
@@ -220,6 +191,22 @@
       display: flex;
     }
   }
+
+  .ai-header {
+    font-size: 40px;
+    line-height: 52px;
+  }
+
+  .ai {
+    .ai-img {
+      img {
+        height: 450px;
+      }
+    }
+  }
+}
+
+@media (max-width: 830px) {
 
   .form {
     .form-content {
