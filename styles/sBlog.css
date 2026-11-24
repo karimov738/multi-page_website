@@ -52,7 +52,7 @@ a {
   overflow-x: hidden;
   width: 1340px;
   border-radius: 50%;
-  bottom: 380px;
+  bottom: 0px;
   right: -980px;
   opacity: 20%;
   z-index: 0;
@@ -373,7 +373,7 @@ a {
   left: -800px;
 }
 .form .low-lines {
-  bottom: -4020px;
+  bottom: -4350px;
   right: -800px;
   border-radius: 45%;
 }

@@ -10,45 +10,22 @@ button.addEventListener('click', function () {
     ul.classList.toggle('active')
 })
 
-
 const links = document.querySelectorAll('.navbar a');
 //debugger
 
 links.forEach(link => {
     //debugger
-    if(window.location.pathname == '/index.html'){
-        if(link.pathname == '/blog.html') {
+    if (window.location.pathname == '/index.html') {
+        if (link.pathname == '/blog.html') {
             link.classList.add('link-active')    // hell code
         }
-    } else {
-        if (link.pathname === window.location.pathname) {
-            //debugger
-            link.classList.add('link-active');
-            //debugger
-        }
+    } else if (link.pathname === window.location.pathname && window.location.pathname !== '/contact.html') {
+        link.classList.add('link-active');
     }
-    if(window.location.pathname == '/contact.html'){
-        link.classList.remove('link-active')
-    }
-    
-    //  debugger
-
-    // if(window.location.pathname === '/index.html'){
-    //     link.classList.add('link-active')
-    // }
 });
 
 //debugger
 
-// links.forEach(link => {
-//     //debugger
-//     if(link.pathname === window.location.pathname){
-//         //debugger
-//         link.classList.add('link-active')
-//         //debugger
-//     }
-// });
-//debugger
 
 window.addEventListener('scroll', function () {
     if (window.scrollY > 0) {
